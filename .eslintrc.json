@@ -1,3 +1,41 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+     "next/typescript",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
+    "react/prop-types": "off", // Disables prop-types validation
+    "indent": ["error", 2],  // Indent with 2 spaces,
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      { "varsIgnorePattern": "^_" }
+    ],
+     "quotes": ["error", "single"],
+    "@typescript-eslint/no-explicit-any": "warn",
+    "no-console": "warn",
+    "no-unused-vars": ["warn", { "varsIgnorePattern": "^_" }]
+  },
+  "ignorePatterns": ["**/*.css"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/no-require-imports": "error"
+      }
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "rules": {
+        "@typescript-eslint/no-require-imports": "off"
+      }
+    }
+  ]
 }
