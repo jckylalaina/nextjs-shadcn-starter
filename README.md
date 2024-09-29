@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Starter Project
+
+This is a Next.js starter project using the following stack:
+
+- **Prettier**, **ESLint**, **commitizen**, and **Husky** for linting and code formatting
+- **next-intl** for internationalization (i18n)
+- **Tailwind CSS** and **Shadcn UI** for styling
+
+## Project Structure
+
+The repository consists of multiple branches for modular setup:
+
+### 1. `feat-init-project-with-shadcn`
+
+This branch includes:
+
+- Initial setup of Next.js
+- Integration of **Shadcn UI** with **Tailwind CSS**
+
+### 2. `feat-next-intl`
+
+This branch adds:
+
+- **next-intl** integration for managing internationalization
+- All required i18n configurations
+
+### 3. `feat-prettier-husky`
+
+This branch focuses on:
+
+- Setting up **Prettier**, **ESLint**, and **Husky**
+- Commit convention using **commitizen**
+
+## Main Branch
+
+The main branch combines all the features:
+
+- Full integration of **Shadcn UI**, **next-intl**, and **Prettier** + **Husky**
+- Ready for production or further customization.
 
 ## Getting Started
 
-First, run the development server:
+1. **Clone the repo** and switch to the desired branch:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   ```bash
+   git clone <repo-url>
+   cd <repo-folder>
+   git checkout <branch-name>
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install dependencies:**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   ```bash
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Run the development server:**
 
-## Learn More
+   ```bash
+   npm run dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. **Build for production:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   npm run build
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on Vercel
+- Use **commitizen** for commit messages:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  ```bash
+  git add .
+  npm run commit
+  ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+This project is licensed under the MIT License.
